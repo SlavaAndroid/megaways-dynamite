@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Megaways Dynamite</string>
+
+    <string name="facebook_id">514587943919992</string>
+    <string name="facebook_token">7989b1de622350d2defeab7483be2a3e</string>
+
+    <string name="you_win">YOU WIN %1$d</string>
+    <string name="chose_credit">CHOSE CREDIT</string>
+    <string name="_100">100</string>
+    <string name="_200">200</string>
+    <string name="_300">300</string>
+    <string name="win">WIN</string>
+    <string name="bet">BET</string>
+    <string name="credit">CREDIT</string>
+    <string name="lose_text">YOU LOSE</string>
+
+</resources>
