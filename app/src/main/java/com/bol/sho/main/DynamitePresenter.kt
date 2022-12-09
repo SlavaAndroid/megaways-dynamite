@@ -62,13 +62,12 @@ class DynamitePresenter(private val view: DynamiteContract.View) : DynamiteContr
             } else {
                 var url = userInfo!!.url
                 if (url.isEmpty()) {
-                    val apps =
-                        withContext(Dispatchers.IO) { getAppsFlyer(activity) }
-                    var deep = "null"
-                    when(apps) {
-                        null -> {
-                            deep =
-                                withContext(Dispatchers.IO) { getDeepLink() }
+                    val deep = withContext(Dispatchers.IO) { getDeepLink() }
+                    var apps: MutableMap<String, Any>? = null
+                    when(deep) {
+                        "null" -> {
+                            apps =
+                                withContext(Dispatchers.IO) { getAppsFlyer(activity) }
                             url = urlBuilder(apps, deep, gadid)
                         }
                         else -> {
